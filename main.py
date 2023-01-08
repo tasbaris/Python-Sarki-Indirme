@@ -1,6 +1,5 @@
 import requests
 import json
-import shutil
 import time
    
 url = "https://youtube-music1.p.rapidapi.com/v2/search"
@@ -44,6 +43,5 @@ except Exception:
 veri = json.loads(response.text);
 response = requests.get(veri["result"]["download_url"])
 open(sarkiAdi+".mp3","wb").write(response.content);
-shutil.move(sarkiAdi+".mp3","C:/Users/Barış TAŞ/Desktop/Yedek/Müzikler")
 print("İndirme işlemi tamamlandı!")  
 time.sleep(2);
