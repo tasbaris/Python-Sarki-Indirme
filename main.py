@@ -63,7 +63,7 @@ try:
    if not os.path.exists("./Music"):
       os.mkdir("./Music")     
    file_path = os.path.join("Music", sarkiAdi + ".m4a")
-   open(file_path,"wb").write(response.content)         #  MÜZİK SESİNİ KAYDETMİYOR
+   open(file_path,"wb").write(response.content)     
    print("İndirme işlemi tamamlandı!")  
 except ConnectionError:
    print("İnternet bağlantınızı Kontrol edin.")
